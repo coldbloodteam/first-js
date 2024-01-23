@@ -38,3 +38,5 @@ JavaScript – это язык программирования, который 
 * Function Declaration
 * Function Expression
 * Immidiatly Invoked Function Expression 
+
+### Рекурсия як намуди цикл то кондишна кор мекунад!
