@@ -953,11 +953,230 @@
 
 //Task 3
 
-function power(a, b) {
-  if (b == 0) {
-    return 1;
-  }
-  return a * power(a, b - 1);
-}
+// function get(a,b){
+//     if(b == 0){
+//         return 1;
+//     }
+//     return a * get(a,b-1)
+// }
+// console.log(get(2,3));
 
-console.log(power(2, 3));
+//Class Task 5
+
+// function createAdder(num1){
+//     let temp = num1;
+
+//     return (num2) => {
+//         return temp +=  num2;
+//     }
+// }
+// const adder = createAdder(5);
+// console.log(adder(3));
+// console.log(adder(3));
+
+//Task 1
+
+// function sumDigit(num){
+//     if(num == 0){
+//         return 0;
+//     }
+//     return (num % 10) + sumDigit(Math.floor(num / 10))
+// }
+
+// console.log(sumDigit(333));
+
+//Task 2
+
+// function multisum(sum,b = 10){
+//     if(b == 0){
+//         return 0;
+//     }
+//     return sum * b  + multisum(sum, b - 1);
+// }
+
+// console.log(multisum(1));
+
+//Task 3
+
+// function gcd(a,b){
+//     if(b == 0){
+//         return a;
+//     }
+//     return gcd(b, a % b)
+// }
+
+// console.log(gcd(32,8));
+
+
+//Task 4 
+
+// function evenRecursion(num){
+//     if(num == 0){
+//         return true;
+//     }   
+//     else if(num < 0){
+//         return false;
+//     }
+//     return evenRecursion(num - 2);
+// }
+
+// console.log(evenRecursion(124));
+// console.log(evenRecursion(-41));
+// console.log(evenRecursion(17));
+
+//Task 5
+
+// function add_suffix(num){
+//     return (a) => {
+//         return a + num;
+//     }
+// }
+
+// let add_ly = add_suffix("ly");
+// console.log(add_ly("hopeless"));
+// console.log(add_ly("total"));
+
+//Task 6
+
+// function sumNumbers(num){
+//     return (a = 0) => {
+//         return (b = 0) => {
+//             return (c = 0) => {
+//                 return (d = 0) => {
+//                     return (e = 0) => {
+//                         return num + a + b + c + d + e;
+//                     }
+//                 }
+//             }
+//         }   
+//     }
+// }
+// console.log(sumNumbers(2)(3)(4)()()(6));
+// console.log(sumNumbers(2)()()(2)(2)(1));
+// console.log(sumNumbers(1)()(4)()()(6));
+
+//Task 7
+
+// function incrementBy(num){
+//     let sum = num;
+//     return function addFive(num2){
+//         return sum += num2;
+//         }
+// }
+
+// const addFive = incrementBy(5);
+// console.log(addFive(10));
+// console.log(addFive(10));
+
+// Home Task 1
+
+// function sumOddTo(num){
+//     if(num == 1){
+//         return 1;
+//     }
+//     if(num % 2 == 0){
+//         num =  num - 1;    
+//     }
+//     return num + sumOddTo(num - 2);
+// }
+
+// console.log(sumOddTo(5));
+// console.log(sumOddTo(8));
+// console.log(sumOddTo(1));
+
+
+//Home task array 
+
+// TAsk 1.
+// function get(a) {
+//     let res = a.filter((e) => {
+//         return e
+//     })
+//     return res.at(0)
+// }
+// console.log(get([1, 2, 3]));
+// console.log(get([80, 5, 100]));
+// console.log(get([-500, 0, 50]));
+
+// Task 2.
+// function get(...a) {
+//     let res = a.toString().split(",")
+//     return res.map(Number)
+// }
+// console.log(get (1,2));
+// console.log(get (51,21));
+// console.log(get (512124,215));
+
+// Task 3.
+// function get(a) {
+//     let res = a.toReversed()
+//     return res
+// }
+// console.log(get([1, 2, 3, 4]));
+// console.log(get([9, 9, 2, 3, 4]));
+// console.log(get([]));
+
+// Task 4.
+// function get(a) {
+//     let res = a.map((e) => {
+//         return e + 1
+//     })
+//     return res
+// }
+// console.log(get([0, 1, 2, 3]));
+// console.log(get([2, 4, 6, 8]));
+// console.log(get([-1, -2, -3, -4]));
+
+// Task 5.
+// function get(a) {
+//     let res = a.filter((e) => {
+//         return e
+//     })
+//     return res.at(-1)
+// }
+// console.log(get([1, 2, 3]));
+// console.log(get(["cat", "dog", "duck"]));
+// console.log(get([true, false, true]));
+
+// Task 6.
+// function get(a) {
+//     let res = a.join("")
+//     return res
+// }
+// console.log(get([1, 2, 3, 4, 5, 6]));
+// console.log(get(["a", "b", "c", "d", "e", "f"]));
+// console.log(get([1, 2, 3, "a", "s", "dAAAA"]));
+
+// Task 7.
+// function get(a,b) {
+//     return a.includes(b)
+// }
+// console.log(get([1, 2, 3, 4, 5], 3));
+// console.log(get([1, 1, 2, 1, 1], 3));
+// console.log(get([5, 5, 5, 6], 5));
+
+// Task 8.
+// function get(a,b) {
+//     return a.indexOf(b)
+// }
+// console.log(get(["hi", "edabit", "fgh", "abc"], "fgh"));
+// console.log(get(["Red", "blue", "Blue", "Green"], "blue"));
+// console.log(get(["a", "g", "y", "d"], "d"));
+
+// Task 9.
+// function get(...a) {
+//     let res = a.join().split(',')
+//     return res.map(Number)
+// }
+// console.log(get([1, 3, 5], [2, 6, 8]));
+// console.log(get([7, 8], [10, 9, 1, 1, 2]));
+// console.log(get([4, 5, 1], [3, 3, 3, 3, 3]));
+
+// Task 10.
+// function get(a) {
+//     let res = a.join().split(",")
+//     return res.map(Number)
+// }
+// console.log(get(["9.4", "4.2"]));
+// console.log(get(["91", "44"]));
+// console.log(get(["9.5", "8.8"]));
