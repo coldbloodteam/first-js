@@ -1180,3 +1180,215 @@
 // console.log(get(["9.4", "4.2"]));
 // console.log(get(["91", "44"]));
 // console.log(get(["9.5", "8.8"]));
+
+// Home task
+// function task1(a){
+//     let res = a.join(" ").split(" ")
+//     let empty = ""
+//     for(let i=0; i<res.length; i++){
+//         if(res[i].length > empty.length){
+//                 empty = res[i]
+//         }
+//     }
+//     return empty
+// }
+// console.log(task1(["Hello darkness  my  old friend"]));
+// console.log(task1(["Hello there  mate"]));
+// console.log(task1(["Kalyas toy is plastic"]));  
+
+// function task2(a){
+//     let res = ""
+//     for(let i=0; i<a.length; i++){
+//         if(a[i].endsWith("Woman")){
+//             continue
+//         }
+//         if(a[i].endsWith("woman")){
+//             continue
+//         }
+//         if(a[i].endsWith("man")){
+//             res += a[i] + " "
+//         }
+//     }
+//     return (res.split(" "));
+// }
+// console.log(task2(["Batman", "Superman", "Wonder-Woman"]));
+// console.log(task2(["Catwoman", "Deadpool", "Dr.Strange", "CaptainAmerica",
+// "Aquaman", "Hawkeye"]));
+// console.log(task2(["Wonder-Woman", "Catwoman", "Invisible-Woman"]));
+
+// function task3(arr) {
+//     for (let i = 0; i < arr.length; i++) {
+//       if (arr[i] % 2 !== i % 2) return false
+//     }
+//     return true;
+// }
+// console.log(task3([2,7,4,9,6,1,6,3]));
+// console.log(task3([2,7,9,1,6,1,6,3]));
+// console.log(task3([2,7,8,8,6,1,6,3]));
+
+// function task4(a){
+//      let res = a.sort((a, b) => b - a)
+//      if(a.at(-1) < 0){
+//         return (a.at(-3) + a.at(-2));
+//      }
+//      if(a.at(-1) > 0 && a.at(-2)>0){
+//         return (a.at(-2) + a.at(-1));
+//      }
+// }
+// console.log(task4([19,5,42,2,77]));
+// console.log(task4([10, 343445353, 3453445, 3453545353453]));
+// console.log(task4([2,9,6,-1]));
+      
+
+//     function task5(a){
+//     let res1 = null
+//     for(let i=0; i<a.length; i++){
+//         if(a[i].at(-1) == 7){
+//             continue
+//         }
+//         let res = (a[i] + "7")
+//         console.log(res.split());
+//     }
+// }
+// console.log(task5(["G", "F", "C"]));
+// console.log(task5(["Dm", "G", "E", "A"]));
+
+// task 6
+
+// function flickSwitch(arr){
+//     let s = []
+//     let f = true
+//     arr.forEach(element => {
+//         if(element=='flick'){
+//             f = false
+//         }
+//         s.push(f)
+//     });
+//     return s
+// }
+// console.log(flickSwitch(["edabit", "flick", "eda", "bit"]))\
+
+
+// Task 7.
+// function get(arr) {
+//     let res = arr.sort((a, b) => {
+//         return a - b
+//     })
+//     return res.slice(0, 2).reduce((a, b) => {
+//         return a + b
+//     })
+// }
+// console.log(get([10, 343445353, 3453445, 3453545353453]));
+
+// Task 8.
+// function get(a) {
+//     let res = a.map((e, i) => {
+//         if (e.at(-1) == 7) return e
+//         else return e+7
+//     })
+//     return res
+// }
+// console.log(get(["F7", "E", "A7", "Ab7", "Gm7", "C7"]));
+
+// Task 9.
+// function get(a) {
+//     let res = a.join(" ").split(" ").map((e, i) => {
+//         return e.at(0).toUpperCase().concat(e.slice(1))
+//     })
+//     return res
+// }
+// console.log(get(["mavis", "senaida", "letty"]));
+
+
+// task 12
+//     function get(arr2){
+//     return  arr2.filter((e,i,arr)=> arr.indexOf(e) == i);
+//     }
+//     console.log(get([1,1,2,3,4]));
+//     console.log(get([2,3,2,4,3,4,6]));
+
+//     task 13
+
+// function sevenBoom(a) {
+//     let d = 0;
+//     let r = a.split(",")
+//     for (let i = 0; i < r.length; i++) {
+//         if (r[i] == "7") {
+//             d = "boom"
+//         }
+//         else {
+
+//         }
+
+//     }
+
+//     return d=="boom"?"boom":"Not!"
+// }
+// console.log(sevenBoom("1,2,3,4,5,6,8,7"));
+
+
+//homeTask
+
+// function getVoteCount(a){
+//     let obj = a;
+//     return console.log(obj.upvotes - obj.downvotes);
+// }
+
+// getVoteCount({upvotes:13,downvotes:0})
+// getVoteCount({upvotes:2,downvotes:33})
+// getVoteCount({upvotes:132,downvotes:132})
+
+//Task 2
+
+// function volumeOfBox(a){
+//     let obj = a;
+//     return console.log(obj.width * obj.length * obj.height);
+// }
+// volumeOfBox({ width: 2, length: 5, height: 1 })
+// volumeOfBox({ width: 4, length: 2, height: 2 })
+// volumeOfBox({ width: 2, length: 3, height: 5 })
+
+//Task 3
+
+// function fiftyThirtyTwenty(a){
+//     let fifty = Math.floor(((a * 30) / 100))
+//     let thirty = Math.floor((a * 30) / 100)
+//     let twenty = Math.floor((a * 20) / 100)
+//     let result = {"Needs":fifty, "Wants":thirty,"Savings":twenty};
+//     return console.log(result);
+// }
+// fiftyThirtyTwenty(10000)
+// fiftyThirtyTwenty(50000)
+// fiftyThirtyTwenty(13450)
+
+//Task 4
+
+// function get(a){
+//     if(a=="Darth Vader")return "Luke, I am your father";
+//     if(a=="Leia")return "Luke, I am your sister."
+//     if(a=="Han")return "Luke, I am your brother in law."
+// }
+// console.log(get("Darth Vader"));
+
+//Task 5
+
+// function cityFacts(a){
+//     return console.log(a.name + " has a " + a.population + "of " + a.population + "and is situated in " + a.continent);
+// }
+// cityFacts({ name: "Paris", population: "2,140,526", continent:
+// "Europe"})
+// cityFacts({ name: "Tokyo", population: "13,929,286", continent:
+// "Asia"})
+
+
+//practice
+
+var arr = [1, 2, 3, 4, 5]
+
+// для каждого элемента массива запустить функцию,
+// промежуточный результат передавать первым аргументом далее
+var result = arr.reduce(function(sum, current) {
+  return sum * current;
+},);
+
+console.log( result ); // 15
